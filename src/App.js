@@ -15,9 +15,9 @@ import { Toaster } from "react-hot-toast";
 import ScrollToTop from "./components/common/ScrollToTop";
 // import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 
-
 const LandingPage = lazy(() => import("./pages/landingPages/LandingPage"));
 const Thankyou = lazy(() => import("./pages/Thankyou"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 
 AOS.init({
   once: true,
@@ -42,7 +42,7 @@ export default function App() {
               path={path}
               element={
                 <>
-                  <WebsiteHeader name={name} />
+                  <WebsiteHeader />
                   {component}
                   <WebsiteFooter />
                 </>
@@ -51,6 +51,7 @@ export default function App() {
           ))}
 
           <Route path="/thankyou" element={<Thankyou />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
           {/* Landing Pages */}
           <Route

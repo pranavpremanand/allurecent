@@ -41,16 +41,19 @@ const ContactForm = () => {
       to: companyDetails.email,
       subject: "New Contact Form Submission - Allurecent LLP",
       body: emailBody,
-      name:"Allurecent Software Solutions",
+      name: "Allurecent Software Solutions",
     };
 
-    await fetch("https://send-mail-redirect-boostmysites.vercel.app/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
+    await fetch(
+      "https://send-mail-redirect-boostmysites.vercel.app/send-email",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      }
+    )
       .then((response) => response.json())
       .then((res) => {
         if (res.error) {
@@ -76,21 +79,25 @@ const ContactForm = () => {
         <h2 className="heading-2 mt-5">Get in Touch</h2>
         <p className="desc">
           Ready to take your business to the next level with innovative
-          technology? Contact us today to learn how Allurecent
-          can help you achieve your digital transformation goals.
+          technology? Contact us today to learn how Allurecent can help you
+          achieve your digital transformation goals.
         </p>
-        <Link
-          to={`tel:${companyDetails.phone}`}
-          className="flex items-start gap-3 w-fit mt-5"
-        >
+        <div className="flex items-start gap-3 w-fit mt-5">
           <div className="w-[2.5rem] h-[2.5rem] rounded-full bg-primary flex justify-center items-center">
             <FaPhone className="text-2xl scale-x-[-1]" />
           </div>
           <div className="flex flex-col h-full">
             <p className="font-medium">Call Us</p>
-            <p className="desc">{companyDetails.phone}</p>
+            <div className="flex flex-wrap gap-2">
+              <Link to={`tel:${companyDetails.phone}`} className="desc">
+                {companyDetails.phone}, 
+              </Link>
+              <Link to={`tel:${companyDetails.phone2}`} className="desc">
+                {companyDetails.phone2}
+              </Link>
+            </div>
           </div>
-        </Link>
+        </div>
         <Link
           to={`mailto:${companyDetails.email}`}
           className="flex items-start gap-3 w-fit mt-5"

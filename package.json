@@ -12,6 +12,7 @@
     "hamburger-react": "^2.5.1",
     "keen-slider": "^6.8.6",
     "leaflet": "^1.9.4",
+    "pdfjs-dist": "^2.16.105",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.2",
@@ -20,6 +21,7 @@
     "react-intersection-observer": "^9.13.1",
     "react-leaflet": "^4.2.1",
     "react-modern-drawer": "^1.4.0",
+    "react-pdf": "^9.2.1",
     "react-player": "^2.16.0",
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
@@ -51,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.13"
+    "tailwindcss": "^3.4.13",
+    "worker-loader": "^3.0.8"
   }
 }

@@ -45,17 +45,12 @@ import { ReactComponent as webIcon2 } from "./assets/svgs/Responsive Web Design.
 import { ReactComponent as webIcon3 } from "./assets/svgs/SEO & Performance Optimization.svg";
 import { ReactComponent as webIcon4 } from "./assets/svgs/Content Management Systems.svg";
 
-// iot services icons
-import { ReactComponent as iotIcon1 } from "./assets/svgs/Smart Device Integration.svg";
-import { ReactComponent as iotIcon2 } from "./assets/svgs/Real-Time Data Analytics.svg";
-import { ReactComponent as iotIcon3 } from "./assets/svgs/Automation.svg";
-import { ReactComponent as iotIcon4 } from "./assets/svgs/Secure IoT Solutions.svg";
-
 import { lazy } from "react";
 const Home = lazy(() => import("./pages/website/Home"));
 const Services = lazy(() => import("./pages/website/Services"));
 const ContactUs = lazy(() => import("./pages/website/ContactUs"));
 const AboutUs = lazy(() => import("./pages/website/AboutUs"));
+const CaseStudies = lazy(() => import("./pages/website/CaseStudies"));
 
 export {
   logoImg,
@@ -89,8 +84,9 @@ export {
 // company details
 export const companyDetails = {
   phone: "+91-9731068406",
+  phone2: "+91-7338453523",
   whatsapp: "919731068406",
-  email: "abc@xyz.com",
+  email: "ajayv@allurecent.org",
   address:
     "SPD Plaza, Koramangala Industrial Layout, 5th Block, Koramangala, Bengaluru, Karnataka 560034",
   twitter: "",
@@ -116,6 +112,11 @@ export const routes = [
     name: "About Us",
     path: "/about-us",
     component: <AboutUs />,
+  },
+  {
+    name: "Case Studies",
+    path: "/case-studies",
+    component: <CaseStudies />,
   },
   {
     name: "Contact Us",

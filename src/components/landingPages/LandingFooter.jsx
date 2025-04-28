@@ -52,13 +52,28 @@ const LandingFooter = () => {
               >
                 Contact Us
               </ScrollLink>
+              <Link
+                to="/privacy-policy"
+                className="text-white/70 desc text-sm hover:text-primary transition-all duration-300"
+              >
+                Privacy Policy
+              </Link>
             </div>
             <div className="flex flex-col gap-2">
               <h6 className="font-medium mb-1">Contact Us</h6>
               <div className="flex flex-col">
                 <h6 className="text-[.9rem] mb-1">Phone</h6>
-                <Link to={`tel:${companyDetails.phone}`} className="text-white/70 desc text-sm">
+                <Link
+                  to={`tel:${companyDetails.phone}`}
+                  className="text-white/70 desc text-sm"
+                >
                   {companyDetails.phone}
+                </Link>
+                <Link
+                  to={`tel:${companyDetails.phone2}`}
+                  className="text-white/70 desc text-sm"
+                >
+                  {companyDetails.phone2}
                 </Link>
               </div>
               <div className="flex flex-col mt-2">
@@ -70,10 +85,10 @@ const LandingFooter = () => {
             </div>
           </div>
         </div>
-        <div className="pt-4 mt-7 border-t border-primary w-full">
+        <div className="pt-4 mt-7 space-y-6 border-t text-center border-t border-primary w-full">
           <div className="flex justify-center gap-5 w-full">
             <div className="flex gap-5 items-center mt-5">
-            <Link
+              <Link
                 to={companyDetails.facebook}
                 rel="noopener noreferrer"
                 target="_blank"
@@ -103,6 +118,10 @@ const LandingFooter = () => {
               </Link>
             </div>
           </div>
+          <p className="text-center text-sm">
+            © 2025 Allurecent Software Solutions. Content protected. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </div>
